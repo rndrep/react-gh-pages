@@ -36,18 +36,20 @@ const App = () => {
     return (
         <div className="container">
             <div className="content">
-                <div className="microscope-container">
-                    <Overlay name="plane polarised light" />
-                    <Wheel />
-                    <Microscope images={ppl} rotation={rotation} />
-                </div>
+                <div className="microscope-wrap">
+                    <div className="microscope-container">
+                        <Overlay name="plane polarised light" />
+                        <Wheel />
+                        <Microscope images={ppl} rotation={rotation} />
+                    </div>
 
-                <p className="degrees">{Math.round(rotation)}°</p>
+                    <p className="degrees">{Math.round(rotation)}°</p>
 
-                <div className="microscope-container">
-                    <Overlay name="between crossed polars" />
-                    <Wheel />
-                    <Microscope images={bcp} rotation={rotation} />
+                    <div className="microscope-container">
+                        <Overlay name="between crossed polars" />
+                        <Wheel />
+                        <Microscope images={bcp} rotation={rotation} />
+                    </div>
                 </div>
             </div>
         </div>
